@@ -1,22 +1,12 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ParallaxEffect from '@/components/ParallaxEffect';
-import { ExternalLink, Github, ArrowRight, Layout } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
-import { Card, CardContent } from "@/components/ui/card";
 
 const Projects = () => {
-  const [view, setView] = useState<'grid' | 'carousel'>('grid');
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const projects = [
@@ -124,7 +114,6 @@ const Projects = () => {
     }
   ];
 
-  // Effects for projects
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
@@ -136,16 +125,6 @@ const Projects = () => {
         ease: [0.22, 1, 0.36, 1]
       }
     })
-  };
-
-  const cardVariants = {
-    initial: { scale: 1, y: 0, boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" },
-    hover: {
-      scale: 1.03,
-      y: -8,
-      boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-      transition: { duration: 0.3, ease: "easeOut" }
-    }
   };
 
   return (
@@ -174,188 +153,25 @@ const Projects = () => {
                 A curated selection of my projects showcasing my expertise in
                 web development, design, and problem-solving.
               </p>
-              
-              {/* View toggle buttons */}
-              <div className="flex justify-center gap-4 mt-6">
-                <button 
-                  onClick={() => setView('grid')}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all ${view === 'grid' ? 'bg-primary text-white' : 'bg-secondary text-foreground'}`}
-                >
-                  <Layout className="w-4 h-4" />
-                  Grid View
-                </button>
-                <button 
-                  onClick={() => setView('carousel')}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all ${view === 'carousel' ? 'bg-primary text-white' : 'bg-secondary text-foreground'}`}
-                >
-                  <ArrowRight className="w-4 h-4" />
-                  Carousel View
-                </button>
-              </div>
             </motion.div>
           </ParallaxEffect>
 
-          {/* Custom Grid View */}
-          {view === 'grid' && (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-[250px]">
-              {/* Arrange projects in a specific grid layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
               <motion.div
-                custom={0}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={fadeInUpVariants}
-                whileHover="hover"
-                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 md:row-span-3 h-full"
-                onMouseEnter={() => setHoveredProject(projects[0].id)}
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm h-full hover:shadow-lg transition-all duration-300"
+                onMouseEnter={() => setHoveredProject(project.id)}
                 onMouseLeave={() => setHoveredProject(null)}
               >
-                <ProjectCard project={projects[0]} hoveredProject={hoveredProject} />
+                <ProjectCard project={project} hoveredProject={hoveredProject} />
               </motion.div>
-
-              <motion.div
-                custom={1}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={fadeInUpVariants}
-                whileHover="hover"
-                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 md:row-span-2 h-full"
-                onMouseEnter={() => setHoveredProject(projects[1].id)}
-                onMouseLeave={() => setHoveredProject(null)}
-              >
-                <ProjectCard project={projects[1]} hoveredProject={hoveredProject} />
-              </motion.div>
-
-              <motion.div
-                custom={2}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={fadeInUpVariants}
-                whileHover="hover"
-                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 md:row-span-5 md:col-start-3 md:row-start-1 h-full"
-                onMouseEnter={() => setHoveredProject(projects[4].id)}
-                onMouseLeave={() => setHoveredProject(null)}
-              >
-                <ProjectCard project={projects[4]} hoveredProject={hoveredProject} />
-              </motion.div>
-
-              <motion.div
-                custom={3}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={fadeInUpVariants}
-                whileHover="hover"
-                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 md:row-span-3 md:col-start-2 md:row-start-3 h-full"
-                onMouseEnter={() => setHoveredProject(projects[2].id)}
-                onMouseLeave={() => setHoveredProject(null)}
-              >
-                <ProjectCard project={projects[2]} hoveredProject={hoveredProject} />
-              </motion.div>
-
-              <motion.div
-                custom={4}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={fadeInUpVariants}
-                whileHover="hover"
-                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 md:row-span-2 md:col-start-1 md:row-start-4 h-full"
-                onMouseEnter={() => setHoveredProject(projects[3].id)}
-                onMouseLeave={() => setHoveredProject(null)}
-              >
-                <ProjectCard project={projects[3]} hoveredProject={hoveredProject} />
-              </motion.div>
-
-              <motion.div
-                custom={5}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={fadeInUpVariants}
-                whileHover="hover"
-                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 h-full md:hidden"
-                onMouseEnter={() => setHoveredProject(projects[5].id)}
-                onMouseLeave={() => setHoveredProject(null)}
-              >
-                <ProjectCard project={projects[5]} hoveredProject={hoveredProject} />
-              </motion.div>
-            </div>
-          )}
-
-          {/* Carousel View */}
-          {view === 'carousel' && (
-            <div className="py-8">
-              <Carousel className="w-full max-w-5xl mx-auto">
-                <CarouselContent>
-                  {projects.map((project, index) => (
-                    <CarouselItem key={project.id} className="md:basis-1/2 lg:basis-1/3">
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="h-full"
-                      >
-                        <Card className="h-full border border-border/50 overflow-hidden">
-                          <div className="h-48 overflow-hidden relative">
-                            <img 
-                              src={project.image} 
-                              alt={project.title} 
-                              className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-                              <div className="absolute bottom-4 right-4 flex space-x-2">
-                                <a 
-                                  href={project.github} 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                  className="bg-white/90 p-2 rounded-full text-foreground hover:bg-primary hover:text-white transition-all duration-300"
-                                >
-                                  <Github size={16} />
-                                </a>
-                                <a 
-                                  href={project.link} 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                  className="bg-white/90 p-2 rounded-full text-foreground hover:bg-primary hover:text-white transition-all duration-300"
-                                >
-                                  <ExternalLink size={16} />
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <CardContent className="p-5">
-                            <h3 className="font-bold mb-2">{project.title}</h3>
-                            <p className="text-sm text-foreground/70 line-clamp-2 mb-3">{project.description}</p>
-                            <div className="flex flex-wrap gap-1 mt-2">
-                              {project.tags.slice(0, 2).map((tag, i) => (
-                                <span key={i} className="chip chip-secondary text-xs">
-                                  {tag}
-                                </span>
-                              ))}
-                              {project.tags.length > 2 && (
-                                <span className="chip chip-secondary text-xs">
-                                  +{project.tags.length - 2}
-                                </span>
-                              )}
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </motion.div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <div className="flex justify-center mt-8">
-                  <CarouselPrevious className="relative static translate-y-0 -left-0 mr-4" />
-                  <CarouselNext className="relative static translate-y-0 -right-0" />
-                </div>
-              </Carousel>
-            </div>
-          )}
+            ))}
+          </div>
           
-          {/* Detailed Project Information */}
           <div className="mt-20 space-y-24">
             {projects.map((project, index) => (
               <div 
@@ -420,7 +236,6 @@ const Projects = () => {
   );
 };
 
-// Extract ProjectCard to a separate component
 const ProjectCard = ({ project, hoveredProject }: { project: any, hoveredProject: number | null }) => {
   return (
     <>
