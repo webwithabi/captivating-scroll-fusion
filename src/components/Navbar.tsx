@@ -1,12 +1,13 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   // Update scroll state
   useEffect(() => {
@@ -22,21 +23,11 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on navigation
-  const handleNavigation = (id: string) => {
-    setMobileMenuOpen(false);
-    
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const navItems = [
-    { name: 'Home', id: 'home' },
-    { name: 'About', id: 'about' },
-    { name: 'Projects', id: 'projects' },
-    { name: 'Contact', id: 'contact' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -56,13 +47,12 @@ const Navbar = () => {
           transition={{ delay: 0.2 }}
           className="flex items-center"
         >
-          <a 
-            href="#home" 
+          <Link 
+            to="/"
             className="text-foreground font-display font-bold text-xl"
-            onClick={() => handleNavigation('home')}
           >
             <span className="text-gradient">Portfolio</span>
-          </a>
+          </Link>
         </motion.div>
 
         {/* Desktop Menu */}
@@ -72,23 +62,18 @@ const Navbar = () => {
           transition={{ delay: 0.3 }}
           className="hidden md:flex items-center space-x-8"
         >
-          {navItems.map((item, index) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              onClick={() => handleNavigation(item.id)}
-              className="text-foreground/80 hover:text-foreground transition-colors duration-300 link-hover"
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={cn(
+                "text-foreground/80 hover:text-foreground transition-colors duration-300 link-hover",
+                location.pathname === item.path && "text-foreground"
+              )}
             >
               {item.name}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
-            onClick={() => handleNavigation('contact')}
-            className="btn-primary"
-          >
-            Get in Touch
-          </a>
         </motion.div>
 
         {/* Mobile Menu Button */}
@@ -113,22 +98,18 @@ const Navbar = () => {
         >
           <div className="flex flex-col space-y-4 p-6">
             {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                onClick={() => handleNavigation(item.id)}
-                className="text-foreground py-2 hover:text-primary transition-colors duration-300"
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className={cn(
+                  "text-foreground/80 py-2 hover:text-primary transition-colors duration-300",
+                  location.pathname === item.path && "text-primary"
+                )}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
-              onClick={() => handleNavigation('contact')}
-              className="btn-primary text-center mt-2"
-            >
-              Get in Touch
-            </a>
           </div>
         </motion.div>
       )}
