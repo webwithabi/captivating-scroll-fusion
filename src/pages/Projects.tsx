@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ParallaxEffect from '@/components/ParallaxEffect';
@@ -207,9 +206,6 @@ const Projects = () => {
                   viewport={{ once: true, margin: "-50px" }}
                   variants={fadeInUpVariants}
                   whileHover="hover"
-                  variants={cardVariants}
-                  onMouseEnter={() => setHoveredProject(project.id)}
-                  onMouseLeave={() => setHoveredProject(null)}
                   className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 h-full"
                 >
                   <div className="relative h-48 overflow-hidden">
