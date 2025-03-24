@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ParallaxEffect from '@/components/ParallaxEffect';
-import { ExternalLink, Github, ArrowRight, Image, Code, Layout } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, Layout } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import {
@@ -194,96 +195,93 @@ const Projects = () => {
             </motion.div>
           </ParallaxEffect>
 
-          {/* Grid View */}
+          {/* Custom Grid View */}
           {view === 'grid' && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
-                <motion.div
-                  key={project.id}
-                  custom={index}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-50px" }}
-                  variants={fadeInUpVariants}
-                  whileHover="hover"
-                  className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 h-full"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    <motion.div
-                      animate={{
-                        scale: hoveredProject === project.id ? 1.1 : 1,
-                        transition: { duration: 0.4 }
-                      }}
-                    >
-                      <img 
-                        src={project.image} 
-                        alt={project.title} 
-                        className="w-full h-full object-cover"
-                      />
-                    </motion.div>
-                    <div className="absolute top-4 right-4 flex space-x-2">
-                      <a 
-                        href={project.github} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="bg-white/90 p-2 rounded-full text-foreground hover:bg-primary hover:text-white transition-all duration-300"
-                        aria-label="View code on GitHub"
-                      >
-                        <Github size={16} />
-                      </a>
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="bg-white/90 p-2 rounded-full text-foreground hover:bg-primary hover:text-white transition-all duration-300"
-                        aria-label="Visit live site"
-                      >
-                        <ExternalLink size={16} />
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {project.tags.slice(0, 3).map((tag, i) => (
-                        <span key={i} className="chip chip-secondary text-xs">
-                          {tag}
-                        </span>
-                      ))}
-                      {project.tags.length > 3 && (
-                        <HoverCard>
-                          <HoverCardTrigger asChild>
-                            <span className="chip chip-secondary text-xs cursor-help">
-                              +{project.tags.length - 3}
-                            </span>
-                          </HoverCardTrigger>
-                          <HoverCardContent className="w-auto">
-                            <div className="flex flex-wrap gap-1">
-                              {project.tags.slice(3).map((tag, i) => (
-                                <span key={i} className="chip chip-secondary text-xs">
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                          </HoverCardContent>
-                        </HoverCard>
-                      )}
-                    </div>
-                    
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-foreground/70 text-sm mb-4 line-clamp-2">{project.description}</p>
-                    
-                    <div className="mt-6">
-                      <a 
-                        href={`#project-${project.id}`} 
-                        className="btn-primary inline-flex items-center text-sm"
-                      >
-                        View Details <ArrowRight size={16} className="ml-2" />
-                      </a>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-[250px]">
+              {/* Arrange projects in a specific grid layout */}
+              <motion.div
+                custom={0}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeInUpVariants}
+                whileHover="hover"
+                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 md:row-span-3 h-full"
+                onMouseEnter={() => setHoveredProject(projects[0].id)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <ProjectCard project={projects[0]} hoveredProject={hoveredProject} />
+              </motion.div>
+
+              <motion.div
+                custom={1}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeInUpVariants}
+                whileHover="hover"
+                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 md:row-span-2 h-full"
+                onMouseEnter={() => setHoveredProject(projects[1].id)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <ProjectCard project={projects[1]} hoveredProject={hoveredProject} />
+              </motion.div>
+
+              <motion.div
+                custom={2}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeInUpVariants}
+                whileHover="hover"
+                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 md:row-span-5 md:col-start-3 md:row-start-1 h-full"
+                onMouseEnter={() => setHoveredProject(projects[4].id)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <ProjectCard project={projects[4]} hoveredProject={hoveredProject} />
+              </motion.div>
+
+              <motion.div
+                custom={3}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeInUpVariants}
+                whileHover="hover"
+                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 md:row-span-3 md:col-start-2 md:row-start-3 h-full"
+                onMouseEnter={() => setHoveredProject(projects[2].id)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <ProjectCard project={projects[2]} hoveredProject={hoveredProject} />
+              </motion.div>
+
+              <motion.div
+                custom={4}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeInUpVariants}
+                whileHover="hover"
+                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 md:row-span-2 md:col-start-1 md:row-start-4 h-full"
+                onMouseEnter={() => setHoveredProject(projects[3].id)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <ProjectCard project={projects[3]} hoveredProject={hoveredProject} />
+              </motion.div>
+
+              <motion.div
+                custom={5}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={fadeInUpVariants}
+                whileHover="hover"
+                className="relative overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all duration-300 h-full md:hidden"
+                onMouseEnter={() => setHoveredProject(projects[5].id)}
+                onMouseLeave={() => setHoveredProject(null)}
+              >
+                <ProjectCard project={projects[5]} hoveredProject={hoveredProject} />
+              </motion.div>
             </div>
           )}
 
@@ -419,6 +417,89 @@ const Projects = () => {
 
       <Footer />
     </motion.div>
+  );
+};
+
+// Extract ProjectCard to a separate component
+const ProjectCard = ({ project, hoveredProject }: { project: any, hoveredProject: number | null }) => {
+  return (
+    <>
+      <div className="relative h-full overflow-hidden">
+        <motion.div
+          animate={{
+            scale: hoveredProject === project.id ? 1.1 : 1,
+            transition: { duration: 0.4 }
+          }}
+          className="h-full"
+        >
+          <img 
+            src={project.image} 
+            alt={project.title} 
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+        <div className="absolute top-4 right-4 flex space-x-2">
+          <a 
+            href={project.github} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white/90 p-2 rounded-full text-foreground hover:bg-primary hover:text-white transition-all duration-300"
+            aria-label="View code on GitHub"
+          >
+            <Github size={16} />
+          </a>
+          <a 
+            href={project.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white/90 p-2 rounded-full text-foreground hover:bg-primary hover:text-white transition-all duration-300"
+            aria-label="Visit live site"
+          >
+            <ExternalLink size={16} />
+          </a>
+        </div>
+        
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+          <div className="flex flex-wrap gap-2 mb-3">
+            {project.tags.slice(0, 3).map((tag: string, i: number) => (
+              <span key={i} className="chip chip-secondary text-xs">
+                {tag}
+              </span>
+            ))}
+            {project.tags.length > 3 && (
+              <HoverCard>
+                <HoverCardTrigger asChild>
+                  <span className="chip chip-secondary text-xs cursor-help">
+                    +{project.tags.length - 3}
+                  </span>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-auto">
+                  <div className="flex flex-wrap gap-1">
+                    {project.tags.slice(3).map((tag: string, i: number) => (
+                      <span key={i} className="chip chip-secondary text-xs">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </HoverCardContent>
+              </HoverCard>
+            )}
+          </div>
+          
+          <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+          <p className="text-white/80 text-sm mb-4 line-clamp-2">{project.description}</p>
+          
+          <div className="mt-2">
+            <a 
+              href={`#project-${project.id}`} 
+              className="text-white hover:text-primary inline-flex items-center text-sm transition-colors"
+            >
+              View Details <ArrowRight size={16} className="ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
