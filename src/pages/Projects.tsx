@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ParallaxEffect from '@/components/ParallaxEffect';
@@ -12,104 +13,104 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce platform with a seamless checkout experience and real-time inventory management.",
-      longDescription: "Built with React and Node.js, this platform features real-time inventory tracking, integrated payment processing with Stripe, and a responsive design that works flawlessly across all devices.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe", "Redux", "WebSocket"],
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80",
-      link: "#",
+      title: "Growify",
+      description: "A SaaS platform for growth tracking and analytics with comprehensive dashboards and real-time data visualization.",
+      longDescription: "Growify is a powerful SaaS platform designed to help businesses track growth metrics, visualize performance data, and make data-driven decisions. Features an intuitive dashboard with real-time analytics and customizable reporting tools.",
+      tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Vercel"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      link: "https://v0-growify-ladeyvrid11-f3xit0.vercel.app/projects",
       github: "#",
       features: [
-        "Real-time inventory management",
-        "Secure payment processing",
-        "User authentication and authorization",
-        "Order tracking and management",
-        "Admin dashboard with analytics"
+        "Interactive analytics dashboard",
+        "Real-time data visualization",
+        "Customizable reporting tools",
+        "User management system",
+        "Modern, responsive UI"
       ]
     },
     {
       id: 2,
-      title: "Travel Companion App",
-      description: "A travel planner app that helps users discover and organize trips with personalized recommendations.",
-      longDescription: "This Next.js application integrates with various travel APIs to provide real-time flight data, hotel bookings, and local attractions. It features an intuitive interface for trip planning and organization.",
-      tags: ["Next.js", "TailwindCSS", "Google Maps API", "Firebase", "TypeScript"],
+      title: "Abinash Sculptures",
+      description: "Showcase website for a sculpture artist featuring an elegant gallery, artist information, and contact details.",
+      longDescription: "A portfolio website for a sculpture artist with a beautiful gallery display, artist biography, exhibition history, and visitor inquiry system. The design focuses on showcasing the artworks in a clean, minimalist environment.",
+      tags: ["HTML", "CSS", "JavaScript", "Netlify", "Responsive Design"],
       image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "#",
+      link: "https://abinashsculptures.netlify.app/",
       github: "#",
       features: [
-        "Interactive trip planning",
-        "Real-time weather updates",
-        "Local attraction recommendations",
-        "Offline access to itineraries",
-        "Social sharing capabilities"
+        "Image gallery with lightbox",
+        "Artist biography section",
+        "Exhibition history",
+        "Contact form for inquiries",
+        "Mobile-responsive design"
       ]
     },
     {
       id: 3,
-      title: "Dashboard UI",
-      description: "A comprehensive admin dashboard with advanced analytics and real-time data visualization.",
-      longDescription: "A feature-rich dashboard built with React and D3.js, providing real-time analytics, customizable charts, and comprehensive reporting tools for business intelligence.",
-      tags: ["React", "D3.js", "Firebase", "Framer Motion", "TypeScript", "Redux"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "#",
+      title: "Personal Portfolio",
+      description: "Modern portfolio website showcasing professional work, skills, and experience with interactive elements.",
+      longDescription: "A personal portfolio website with a modern design, smooth animations, and interactive elements. Features project showcases, skills section, professional experience, and contact information with a minimalist aesthetic.",
+      tags: ["React", "Vercel", "Framer Motion", "Tailwind CSS", "TypeScript"],
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2712&q=80",
+      link: "https://abinash-karunanidhi.vercel.app/work",
       github: "#",
       features: [
-        "Real-time data visualization",
-        "Customizable dashboard layouts",
-        "Advanced filtering and sorting",
-        "Export functionality",
-        "Role-based access control"
+        "Interactive project showcase",
+        "Skills and expertise section",
+        "Professional timeline",
+        "Contact form with validation",
+        "Dark/light mode toggle"
       ]
     },
     {
       id: 4,
-      title: "Social Network App",
-      description: "A feature-rich social platform with real-time messaging, posts, and user connections.",
-      longDescription: "A modern social network built with React Native and Firebase, featuring real-time chat, media sharing, and an engaging user interface with smooth animations.",
-      tags: ["React Native", "Firebase", "Redux", "Socket.io", "TypeScript"],
+      title: "Abinash Sculptures (Webflow)",
+      description: "Webflow-powered sculpture gallery featuring elegant design, art showcases, and visitor information.",
+      longDescription: "A Webflow-built portfolio for a sculpture artist with stunning visuals, smooth transitions, and a focus on artwork presentation. Includes collections by category, artist information, and a streamlined contact system.",
+      tags: ["Webflow", "CMS", "Responsive Design", "Animation", "Gallery"],
       image: "https://images.unsplash.com/photo-1471989945509-b1e987d9ea70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80",
-      link: "#",
+      link: "https://abinashsculptures.webflow.io/",
       github: "#",
       features: [
-        "Real-time messaging",
-        "Media sharing",
-        "User profiles and connections",
-        "Activity feed",
-        "Push notifications"
+        "Dynamic artwork gallery",
+        "Webflow CMS integration",
+        "Custom animations",
+        "Contact system",
+        "Responsive layout"
       ]
     },
     {
       id: 5,
-      title: "Weather Application",
-      description: "An elegant weather app with accurate forecasts, animations, and location-based services.",
-      longDescription: "This React application uses modern weather APIs to provide precise forecasts, beautiful weather animations, and personalized alerts based on user location.",
-      tags: ["React", "OpenWeather API", "GeoLocation", "Chart.js", "PWA"],
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80",
-      link: "#",
+      title: "Thoufiq Portfolio",
+      description: "Minimalist portfolio website showcasing professional achievements and creative work with a focus on typography and spacing.",
+      longDescription: "A GitHub Pages-hosted portfolio with a clean design, emphasizing typography and whitespace. Features project showcases, professional qualifications, and contact information in an easily navigable layout.",
+      tags: ["HTML/CSS", "JavaScript", "GitHub Pages", "Responsive Design"],
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=4000&q=80",
+      link: "https://abinash-k.github.io/ThoufiqPortfolio/",
       github: "#",
       features: [
-        "7-day weather forecast",
-        "Location-based weather",
-        "Weather alerts and notifications",
-        "Interactive weather maps",
-        "Offline functionality"
+        "Clean, minimalist design",
+        "Project showcase section",
+        "Professional qualifications",
+        "Optimized for mobile devices",
+        "Fast loading performance"
       ]
     },
     {
       id: 6,
-      title: "Fitness Tracker",
-      description: "A comprehensive fitness application for tracking workouts, nutrition, and health metrics.",
-      longDescription: "This full-stack application helps users monitor their fitness journey with workout tracking, nutrition logging, and progress visualization using interactive charts.",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js", "JWT Auth"],
-      image: "https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "#",
+      title: "Personal Site",
+      description: "Modern personal website with a clean interface, project showcases, and professional information.",
+      longDescription: "A personal site built with Next.js and deployed on Vercel, featuring a clean design, dark mode support, and smooth page transitions. Showcases projects, skills, and professional experience in an organized layout.",
+      tags: ["Next.js", "Vercel", "React", "Tailwind CSS", "TypeScript"],
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2365&q=80",
+      link: "https://abinash-k.vercel.app/",
       github: "#",
       features: [
-        "Workout planning and tracking",
-        "Nutrition diary",
-        "Progress visualization",
-        "Goal setting",
-        "Health metrics dashboard"
+        "Responsive layout",
+        "Dark/light theme toggle",
+        "Project portfolio section",
+        "Skills showcase",
+        "Contact information"
       ]
     }
   ];
