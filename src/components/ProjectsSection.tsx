@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ParallaxEffect from './ParallaxEffect';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Project {
   id: number;
@@ -20,29 +21,29 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce platform with a seamless checkout experience and real-time inventory management.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80",
-      link: "#",
+      title: "Growify",
+      description: "A SaaS platform for growth tracking and analytics with comprehensive dashboards and real-time data visualization.",
+      tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      link: "https://v0-growify-ladeyvrid11-f3xit0.vercel.app/projects",
       github: "#"
     },
     {
       id: 2,
-      title: "Travel Companion App",
-      description: "A travel planner app that helps users discover and organize trips with personalized recommendations.",
-      tags: ["Next.js", "TailwindCSS", "Google Maps API"],
+      title: "Abinash Sculptures",
+      description: "Showcase website for a sculpture artist featuring an elegant gallery, artist information, and contact details.",
+      tags: ["HTML", "CSS", "JavaScript", "Netlify"],
       image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "#",
+      link: "https://abinashsculptures.netlify.app/",
       github: "#"
     },
     {
       id: 3,
-      title: "Dashboard UI",
-      description: "A comprehensive admin dashboard with advanced analytics, real-time data visualization, and user management.",
-      tags: ["React", "D3.js", "Firebase", "Framer Motion"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "#",
+      title: "Personal Portfolio",
+      description: "Modern portfolio website showcasing professional work, skills, and experience with interactive elements.",
+      tags: ["React", "Framer Motion", "Tailwind CSS", "TypeScript"],
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2712&q=80",
+      link: "https://abinash-karunanidhi.vercel.app/work",
       github: "#"
     }
   ];
@@ -151,7 +152,7 @@ const ProjectsSection = () => {
               className="p-6"
             >
               <div className="flex flex-wrap gap-2 mb-3">
-                {project.tags.map((tag, i) => (
+                {project.tags.slice(0, 3).map((tag, i) => (
                   <span 
                     key={i} 
                     className="chip chip-secondary text-xs"
@@ -198,12 +199,12 @@ const ProjectsSection = () => {
       </div>
 
       <div className="text-center mt-12">
-        <a 
-          href="#"
+        <Link 
+          to="/projects"
           className="btn-outline inline-flex items-center"
         >
           View All Projects <ArrowRight className="ml-2" size={16} />
-        </a>
+        </Link>
       </div>
     </section>
   );
