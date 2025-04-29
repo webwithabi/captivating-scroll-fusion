@@ -2,32 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import ParallaxEffect from './ParallaxEffect';
-import { Code, Layout, Database, Figma, Server, Globe } from 'lucide-react';
-
-interface SkillCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  delay: number;
-}
-
-const SkillCard: React.FC<SkillCardProps> = ({ icon, title, description, delay }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
-      viewport={{ once: true, margin: "-50px" }}
-      className="glass p-6 rounded-xl project-card"
-    >
-      <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
-        {icon}
-      </div>
-      <h3 className="text-lg font-bold mb-2">{title}</h3>
-      <p className="text-foreground/70 text-sm">{description}</p>
-    </motion.div>
-  );
-};
+import { Megaphone, Globe, Palette, ClipboardList, Clock } from 'lucide-react';
 
 const AboutSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -62,45 +37,6 @@ const AboutSection = () => {
     })
   };
 
-  const skills = [
-    {
-      icon: <Code className="text-primary" size={24} />,
-      title: "Frontend Development",
-      description: "Building responsive and interactive user interfaces with React, Next.js, and modern CSS.",
-      delay: 0.1
-    },
-    {
-      icon: <Layout className="text-primary" size={24} />,
-      title: "UI/UX Design",
-      description: "Creating intuitive user experiences and visually stunning interfaces with attention to detail.",
-      delay: 0.2
-    },
-    {
-      icon: <Database className="text-primary" size={24} />,
-      title: "Backend Integration",
-      description: "Connecting frontend applications to powerful backend services and databases.",
-      delay: 0.3
-    },
-    {
-      icon: <Figma className="text-primary" size={24} />,
-      title: "Design Systems",
-      description: "Developing comprehensive design systems for consistent and scalable applications.",
-      delay: 0.4
-    },
-    {
-      icon: <Server className="text-primary" size={24} />,
-      title: "API Development",
-      description: "Building robust and efficient APIs to power web and mobile applications.",
-      delay: 0.5
-    },
-    {
-      icon: <Globe className="text-primary" size={24} />,
-      title: "Web Performance",
-      description: "Optimizing websites for speed, accessibility, and search engine visibility.",
-      delay: 0.6
-    }
-  ];
-
   return (
     <section id="about" className="relative py-20">
       {/* Background accent */}
@@ -124,7 +60,7 @@ const AboutSection = () => {
                 variants={fadeInUpVariants}
                 className="chip chip-primary mb-4"
               >
-                About Me
+                About Us
               </motion.div>
               
               <motion.h2
@@ -132,7 +68,7 @@ const AboutSection = () => {
                 variants={fadeInUpVariants}
                 className="text-3xl md:text-4xl font-display font-bold mb-6"
               >
-                Passionate about creating <span className="text-gradient">exceptional</span> digital experiences
+                Your Trusted Partner for <span className="text-gradient">Growth</span> and <span className="text-gradient">Success</span>
               </motion.h2>
               
               <motion.p
@@ -140,7 +76,9 @@ const AboutSection = () => {
                 variants={fadeInUpVariants}
                 className="text-foreground/80 mb-4"
               >
-                I'm a web developer and designer with a passion for creating beautiful, functional, and user-centered digital experiences. With {count}+ years of experience in the field, I am always looking for new and innovative ways to bring my clients' visions to life.
+                At Outperformo Solutions, we're dedicated to helping businesses like yours succeed. 
+                With a focus on innovative marketing solutions and expert project management, 
+                we're your trusted partner for growth and success.
               </motion.p>
               
               <motion.p
@@ -148,32 +86,96 @@ const AboutSection = () => {
                 variants={fadeInUpVariants}
                 className="text-foreground/80 mb-6"
               >
-                I believe that design is about more than just making things look pretty – it's about solving problems and creating intuitive, enjoyable experiences for users.
+                With {count}+ years of experience in the field, we are always looking for new and innovative ways to bring our clients' visions to life.
               </motion.p>
               
               <motion.div
                 custom={4}
                 variants={fadeInUpVariants}
               >
-                <a href="#contact" className="btn-primary">
+                <a href="/about" className="btn-primary mr-4">
+                  Learn More
+                </a>
+                <a href="#contact" className="btn-outline">
                   Get In Touch
                 </a>
               </motion.div>
             </motion.div>
           </ParallaxEffect>
 
-          {/* Right column - Experience counter */}
+          {/* Right column - Services overview */}
           <div className="flex-1" ref={ref}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {skills.map((skill, index) => (
-                <SkillCard 
-                  key={index}
-                  icon={skill.icon}
-                  title={skill.title}
-                  description={skill.description}
-                  delay={skill.delay}
-                />
-              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="glass p-6 rounded-xl project-card"
+              >
+                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                  <Megaphone className="text-primary" size={24} />
+                </div>
+                <h3 className="text-lg font-bold mb-2">Marketing Strategy</h3>
+                <p className="text-foreground/70 text-sm">Get proven results - stop wasting marketing dollars with our tailored marketing solutions.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="glass p-6 rounded-xl project-card"
+              >
+                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                  <Globe className="text-primary" size={24} />
+                </div>
+                <h3 className="text-lg font-bold mb-2">Digital Marketing</h3>
+                <p className="text-foreground/70 text-sm">Boost your online presence with SEO, social media, content marketing, and more.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="glass p-6 rounded-xl project-card"
+              >
+                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                  <Palette className="text-primary" size={24} />
+                </div>
+                <h3 className="text-lg font-bold mb-2">Branding</h3>
+                <p className="text-foreground/70 text-sm">Create a unique and memorable brand identity that resonates with your audience.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="glass p-6 rounded-xl project-card"
+              >
+                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                  <ClipboardList className="text-primary" size={24} />
+                </div>
+                <h3 className="text-lg font-bold mb-2">Project Management</h3>
+                <p className="text-foreground/70 text-sm">Expert PMO setup and documentation for successful project execution.</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="glass p-6 rounded-xl project-card"
+                style={{ gridColumn: "1 / -1" }}
+              >
+                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                  <Clock className="text-primary" size={24} />
+                </div>
+                <h3 className="text-lg font-bold mb-2">Virtual Assistance</h3>
+                <p className="text-foreground/70 text-sm">Optimize your business with dependable virtual assistance for administrative tasks, customer service, and more.</p>
+              </motion.div>
             </div>
           </div>
         </div>
