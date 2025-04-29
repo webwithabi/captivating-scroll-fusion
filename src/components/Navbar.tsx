@@ -51,7 +51,7 @@ const Navbar = () => {
             to="/"
             className="text-foreground font-display font-bold text-xl"
           >
-            <span className="text-gradient">Portfolio</span>
+            <span className="text-gradient">OutPerformo</span>
           </Link>
         </motion.div>
 

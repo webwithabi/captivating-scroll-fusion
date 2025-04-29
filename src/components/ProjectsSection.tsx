@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ParallaxEffect from './ParallaxEffect';
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface Project {
@@ -12,7 +12,6 @@ interface Project {
   tags: string[];
   image: string;
   link: string;
-  github: string;
 }
 
 const ProjectsSection = () => {
@@ -21,30 +20,27 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Growify",
-      description: "A SaaS platform for growth tracking and analytics with comprehensive dashboards and real-time data visualization.",
-      tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "https://v0-growify-ladeyvrid11-f3xit0.vercel.app/projects",
-      github: "#"
+      title: "E-commerce SEO Campaign",
+      description: "Comprehensive SEO strategy for a fashion retailer that increased organic traffic by 150% within 6 months.",
+      tags: ["SEO", "E-commerce", "Content Strategy"],
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=5760&q=80",
+      link: "/projects#project-1"
     },
     {
       id: 2,
-      title: "Abinash Sculptures",
-      description: "Showcase website for a sculpture artist featuring an elegant gallery, artist information, and contact details.",
-      tags: ["HTML", "CSS", "JavaScript", "Netlify"],
-      image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "https://abinashsculptures.netlify.app/",
-      github: "#"
+      title: "B2B Social Media Campaign",
+      description: "Strategic social media campaign for a B2B software company that generated 200+ qualified leads.",
+      tags: ["Social Media", "B2B Marketing", "Lead Generation"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80",
+      link: "/projects#project-2"
     },
     {
       id: 3,
-      title: "Personal Portfolio",
-      description: "Modern portfolio website showcasing professional work, skills, and experience with interactive elements.",
-      tags: ["React", "Framer Motion", "Tailwind CSS", "TypeScript"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2712&q=80",
-      link: "https://abinash-karunanidhi.vercel.app/work",
-      github: "#"
+      title: "Real Estate Website Redesign",
+      description: "Complete website redesign for a real estate agency that improved user experience and increased lead conversion by 75%.",
+      tags: ["Web Design", "UX/UI", "Lead Generation"],
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=6052&q=80",
+      link: "/projects#project-3"
     }
   ];
 
@@ -90,7 +86,7 @@ const ProjectsSection = () => {
             variants={fadeInUpVariants}
             className="chip chip-primary mb-4 mx-auto"
           >
-            My Work
+            Case Studies
           </motion.div>
           
           <motion.h2
@@ -98,7 +94,7 @@ const ProjectsSection = () => {
             variants={fadeInUpVariants}
             className="text-3xl md:text-4xl font-display font-bold mb-6"
           >
-            Featured <span className="text-gradient">Projects</span>
+            Recent <span className="text-gradient">Success Stories</span>
           </motion.h2>
           
           <motion.p
@@ -106,8 +102,8 @@ const ProjectsSection = () => {
             variants={fadeInUpVariants}
             className="text-foreground/80"
           >
-            A selection of my recent work, showcasing my skills in web development,
-            design, and problem-solving.
+            Take a look at some of our most successful digital marketing campaigns
+            and how we've helped businesses achieve their goals.
           </motion.p>
         </motion.div>
       </ParallaxEffect>
@@ -164,30 +160,17 @@ const ProjectsSection = () => {
               <h3 className="text-lg font-bold mb-2">{project.title}</h3>
               <p className="text-foreground/70 text-sm mb-4">{project.description}</p>
               <div className="flex items-center justify-between mt-auto">
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <Link 
+                  to={project.link}
                   className="text-primary font-medium flex items-center text-sm hover:underline underline-offset"
                 >
-                  Live Demo <ArrowRight size={16} className="ml-1" />
-                </a>
+                  View Details <ArrowRight size={16} className="ml-1" />
+                </Link>
                 <div className="flex gap-3">
                   <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                    href={project.link}
                     className="text-foreground/70 hover:text-foreground transition-colors duration-300"
-                    aria-label="View code on GitHub"
-                  >
-                    <Github size={18} />
-                  </a>
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-foreground/70 hover:text-foreground transition-colors duration-300"
-                    aria-label="Visit live site"
+                    aria-label="View details"
                   >
                     <ExternalLink size={18} />
                   </a>
@@ -203,7 +186,7 @@ const ProjectsSection = () => {
           to="/projects"
           className="btn-outline inline-flex items-center"
         >
-          View All Projects <ArrowRight className="ml-2" size={16} />
+          View All Case Studies <ArrowRight className="ml-2" size={16} />
         </Link>
       </div>
     </section>

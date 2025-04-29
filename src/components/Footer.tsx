@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#home" className="text-2xl font-display font-bold">
-              <span className="text-gradient">Portfolio</span>
+              <span className="text-gradient">OutPerformo</span>
             </a>
             <p className="text-foreground/60 mt-2 text-sm max-w-md">
               Creating modern, responsive and user-friendly websites and applications with a focus on performance and accessibility.

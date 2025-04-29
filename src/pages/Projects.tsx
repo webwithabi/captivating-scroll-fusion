@@ -13,104 +13,104 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Growify",
-      description: "A SaaS platform for growth tracking and analytics with comprehensive dashboards and real-time data visualization.",
-      longDescription: "Growify is a powerful SaaS platform designed to help businesses track growth metrics, visualize performance data, and make data-driven decisions. Features an intuitive dashboard with real-time analytics and customizable reporting tools.",
-      tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Vercel"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "https://v0-growify-ladeyvrid11-f3xit0.vercel.app/projects",
+      title: "E-commerce SEO Campaign",
+      description: "Comprehensive SEO strategy for a fashion retailer that increased organic traffic by 150% within 6 months.",
+      longDescription: "Developed and implemented a comprehensive SEO strategy for a mid-sized fashion e-commerce website. The campaign included technical SEO improvements, content optimization, and backlink acquisition. Within 6 months, the client saw a 150% increase in organic traffic and a 90% increase in organic conversions.",
+      tags: ["SEO", "E-commerce", "Content Strategy", "Technical SEO", "Analytics"],
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=5760&q=80",
+      link: "#",
       github: "#",
       features: [
-        "Interactive analytics dashboard",
-        "Real-time data visualization",
-        "Customizable reporting tools",
-        "User management system",
-        "Modern, responsive UI"
+        "Technical SEO audit and implementation",
+        "Keyword research and optimization",
+        "Content strategy and creation",
+        "Backlink acquisition",
+        "Performance tracking and reporting"
       ]
     },
     {
       id: 2,
-      title: "Abinash Sculptures",
-      description: "Showcase website for a sculpture artist featuring an elegant gallery, artist information, and contact details.",
-      longDescription: "A portfolio website for a sculpture artist with a beautiful gallery display, artist biography, exhibition history, and visitor inquiry system. The design focuses on showcasing the artworks in a clean, minimalist environment.",
-      tags: ["HTML", "CSS", "JavaScript", "Netlify", "Responsive Design"],
-      image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      link: "https://abinashsculptures.netlify.app/",
+      title: "B2B Social Media Campaign",
+      description: "Strategic social media campaign for a B2B software company that generated 200+ qualified leads.",
+      longDescription: "Created and executed a multi-platform social media campaign for a B2B software company targeting enterprise clients. The campaign involved LinkedIn advertising, content marketing, and engagement strategies. The campaign generated over 200 qualified leads and resulted in 15 enterprise conversions.",
+      tags: ["Social Media", "B2B Marketing", "LinkedIn", "Content Marketing", "Lead Generation"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80",
+      link: "#",
       github: "#",
       features: [
-        "Image gallery with lightbox",
-        "Artist biography section",
-        "Exhibition history",
-        "Contact form for inquiries",
-        "Mobile-responsive design"
+        "Platform-specific strategy development",
+        "Content calendar creation",
+        "Targeted advertising campaigns",
+        "Community engagement tactics",
+        "Performance analytics and optimization"
       ]
     },
     {
       id: 3,
-      title: "Personal Portfolio",
-      description: "Modern portfolio website showcasing professional work, skills, and experience with interactive elements.",
-      longDescription: "A personal portfolio website with a modern design, smooth animations, and interactive elements. Features project showcases, skills section, professional experience, and contact information with a minimalist aesthetic.",
-      tags: ["React", "Vercel", "Framer Motion", "Tailwind CSS", "TypeScript"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2712&q=80",
-      link: "https://abinash-karunanidhi.vercel.app/work",
+      title: "Real Estate Website Redesign",
+      description: "Complete website redesign for a real estate agency that improved user experience and increased lead conversion by 75%.",
+      longDescription: "Redesigned and developed a modern, responsive website for a local real estate agency. The project included UX research, wireframing, design, development, and post-launch optimization. The new website improved user engagement metrics across the board and increased lead form submissions by 75%.",
+      tags: ["Web Design", "UX/UI", "Real Estate", "Responsive Design", "Lead Generation"],
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=6052&q=80",
+      link: "#",
       github: "#",
       features: [
-        "Interactive project showcase",
-        "Skills and expertise section",
-        "Professional timeline",
-        "Contact form with validation",
-        "Dark/light mode toggle"
+        "User experience research and planning",
+        "Responsive, mobile-first design",
+        "Property search functionality",
+        "Lead capture optimization",
+        "Integration with MLS listings"
       ]
     },
     {
       id: 4,
-      title: "Abinash Sculptures (Webflow)",
-      description: "Webflow-powered sculpture gallery featuring elegant design, art showcases, and visitor information.",
-      longDescription: "A Webflow-built portfolio for a sculpture artist with stunning visuals, smooth transitions, and a focus on artwork presentation. Includes collections by category, artist information, and a streamlined contact system.",
-      tags: ["Webflow", "CMS", "Responsive Design", "Animation", "Gallery"],
-      image: "https://images.unsplash.com/photo-1471989945509-b1e987d9ea70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80",
-      link: "https://abinashsculptures.webflow.io/",
+      title: "Local Business PPC Campaign",
+      description: "Targeted Google Ads campaign for a local service business that achieved a 300% ROI within the first quarter.",
+      longDescription: "Designed and managed a highly targeted Google Ads campaign for a local HVAC service company. The campaign utilized location-based targeting, ad scheduling, and conversion-focused landing pages. The campaign achieved a 300% return on ad spend within the first three months and continued to improve with ongoing optimization.",
+      tags: ["PPC", "Google Ads", "Local SEO", "Landing Pages", "Conversion Rate Optimization"],
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=7952&q=80",
+      link: "#",
       github: "#",
       features: [
-        "Dynamic artwork gallery",
-        "Webflow CMS integration",
-        "Custom animations",
-        "Contact system",
-        "Responsive layout"
+        "Keyword research and selection",
+        "Ad copy creation and testing",
+        "Landing page development",
+        "Budget management and optimization",
+        "Call tracking and analytics"
       ]
     },
     {
       id: 5,
-      title: "Thoufiq Portfolio",
-      description: "Minimalist portfolio website showcasing professional achievements and creative work with a focus on typography and spacing.",
-      longDescription: "A GitHub Pages-hosted portfolio with a clean design, emphasizing typography and whitespace. Features project showcases, professional qualifications, and contact information in an easily navigable layout.",
-      tags: ["HTML/CSS", "JavaScript", "GitHub Pages", "Responsive Design"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=4000&q=80",
-      link: "https://abinash-k.github.io/ThoufiqPortfolio/",
+      title: "E-commerce Email Marketing",
+      description: "Strategic email marketing campaign for an online retailer that increased sales by 45% and improved customer retention.",
+      longDescription: "Developed and implemented a comprehensive email marketing strategy for an e-commerce clothing brand. The project included customer segmentation, automated workflows, and personalized content creation. The campaign increased repeat purchases by 45% and improved customer lifetime value metrics across all segments.",
+      tags: ["Email Marketing", "E-commerce", "Customer Retention", "Automation", "Personalization"],
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3882&q=80",
+      link: "#",
       github: "#",
       features: [
-        "Clean, minimalist design",
-        "Project showcase section",
-        "Professional qualifications",
-        "Optimized for mobile devices",
-        "Fast loading performance"
+        "Customer segmentation strategy",
+        "Email automation workflow creation",
+        "Personalized content development",
+        "A/B testing and optimization",
+        "Performance analytics and reporting"
       ]
     },
     {
       id: 6,
-      title: "Personal Site",
-      description: "Modern personal website with a clean interface, project showcases, and professional information.",
-      longDescription: "A personal site built with Next.js and deployed on Vercel, featuring a clean design, dark mode support, and smooth page transitions. Showcases projects, skills, and professional experience in an organized layout.",
-      tags: ["Next.js", "Vercel", "React", "Tailwind CSS", "TypeScript"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2365&q=80",
-      link: "https://abinash-k.vercel.app/",
+      title: "Healthcare Content Marketing",
+      description: "Comprehensive content marketing strategy for a healthcare provider that established them as an industry thought leader.",
+      longDescription: "Created and executed a content marketing strategy for a healthcare provider specializing in telehealth services. The campaign included blog content, video production, and social media distribution with a focus on establishing thought leadership. The strategy resulted in a 200% increase in organic traffic and significantly improved brand visibility.",
+      tags: ["Content Marketing", "Healthcare", "Thought Leadership", "SEO", "Video Production"],
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=6000&q=80",
+      link: "#",
       github: "#",
       features: [
-        "Responsive layout",
-        "Dark/light theme toggle",
-        "Project portfolio section",
-        "Skills showcase",
-        "Contact information"
+        "Content strategy development",
+        "Editorial calendar creation",
+        "Blog article writing and optimization",
+        "Video script development",
+        "Distribution and promotion"
       ]
     }
   ];
@@ -146,13 +146,13 @@ const Projects = () => {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl mx-auto text-center mb-16"
             >
-              <div className="chip chip-primary mb-4 mx-auto">Portfolio</div>
+              <div className="chip chip-primary mb-4 mx-auto">Case Studies</div>
               <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
-                Featured <span className="text-gradient">Projects</span>
+                Our Digital Marketing <span className="text-gradient">Projects</span>
               </h1>
               <p className="text-foreground/80 text-lg mb-8">
-                A curated selection of my projects showcasing my expertise in
-                web development, design, and problem-solving.
+                A showcase of our successful digital marketing campaigns and solutions 
+                that have helped our clients grow their businesses.
               </p>
             </motion.div>
           </ParallaxEffect>
@@ -192,10 +192,7 @@ const Projects = () => {
                       </div>
                       <div className="flex items-center gap-4 pt-4">
                         <a href={project.link} className="btn-primary" target="_blank" rel="noopener noreferrer">
-                          View Live <ExternalLink size={16} className="ml-2" />
-                        </a>
-                        <a href={project.github} className="btn-outline" target="_blank" rel="noopener noreferrer">
-                          Source Code <Github size={16} className="ml-2" />
+                          View Case Study <ExternalLink size={16} className="ml-2" />
                         </a>
                       </div>
                     </div>
