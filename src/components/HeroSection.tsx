@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import ParallaxEffect from './ParallaxEffect';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail, Phone, TrendingUp, ListCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -76,7 +77,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="chip chip-primary animate-fade-in mb-4"
           >
-            Web Developer & UI/UX Designer
+            Digital Marketing & Project Management
           </motion.div>
         </ParallaxEffect>
 
@@ -91,25 +92,24 @@ const HeroSection = () => {
               variants={itemVariants}
               className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6"
             >
-              Crafting digital <span className="text-gradient">experiences</span> that leave an impression
+              Grow Your <span className="text-gradient">Business</span>
             </motion.h1>
             <motion.p 
               variants={itemVariants}
               className="text-lg md:text-xl text-foreground/80 max-w-2xl mb-8"
             >
-              I design and build modern web applications with a focus on interactive experiences, 
-              intuitive interfaces, and pixel-perfect execution.
+              Empowering businesses to reach their full potential with top-notch marketing and project management.
             </motion.p>
             
             <motion.div 
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <a href="#projects" className="btn-primary">
-                View My Work
+              <a href="#contact" className="btn-primary">
+                Contact Us
               </a>
-              <a href="#contact" className="btn-outline">
-                Contact Me
+              <a href="#services" className="btn-outline">
+                Our Services
               </a>
             </motion.div>
           </motion.div>
@@ -151,11 +151,18 @@ const HeroSection = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="mailto:contact@example.com" 
+              href="mailto:jeya.gayathrik14@gmail.com" 
               className="p-2 border border-border hover:border-primary rounded-full transition-colors duration-300"
               aria-label="Email"
             >
               <Mail size={20} />
+            </a>
+            <a 
+              href="tel:+919940533665" 
+              className="p-2 border border-border hover:border-primary rounded-full transition-colors duration-300"
+              aria-label="Phone"
+            >
+              <Phone size={20} />
             </a>
             <div className="w-px h-20 bg-border mx-auto"></div>
           </div>

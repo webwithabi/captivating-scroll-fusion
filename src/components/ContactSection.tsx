@@ -64,7 +64,7 @@ const ContactSection = () => {
             variants={fadeInUpVariants}
             className="chip chip-primary mb-4 mx-auto"
           >
-            Contact Me
+            Contact Us
           </motion.div>
           
           <motion.h2
@@ -201,7 +201,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-bold mb-1">Location</h4>
-                <p className="text-foreground/70">San Francisco, California</p>
+                <p className="text-foreground/70">Chennai, Tamil Nadu</p>
               </div>
             </div>
             
@@ -211,8 +211,8 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-bold mb-1">Email</h4>
-                <a href="mailto:contact@example.com" className="text-foreground/70 hover:text-primary transition-colors duration-300">
-                  contact@example.com
+                <a href="mailto:jeya.gayathrik14@gmail.com" className="text-foreground/70 hover:text-primary transition-colors duration-300">
+                  jeya.gayathrik14@gmail.com
                 </a>
               </div>
             </div>
@@ -223,8 +223,8 @@ const ContactSection = () => {
               </div>
               <div>
                 <h4 className="font-bold mb-1">Phone</h4>
-                <a href="tel:+1234567890" className="text-foreground/70 hover:text-primary transition-colors duration-300">
-                  +1 (234) 567-890
+                <a href="tel:+919940533665" className="text-foreground/70 hover:text-primary transition-colors duration-300">
+                  +91 99405 33665
                 </a>
               </div>
             </div>
@@ -233,7 +233,7 @@ const ContactSection = () => {
           <div className="mt-12 p-6 rounded-xl bg-secondary/70 border border-border/50">
             <h4 className="font-bold mb-4">Availability</h4>
             <p className="text-foreground/70 mb-3">
-              Currently available for freelance projects, part-time positions, or full-time opportunities.
+              Currently available for new projects and consultations.
             </p>
             <p className="text-foreground/70">
               I typically respond to all inquiries within 24-48 hours.
