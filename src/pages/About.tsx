@@ -390,7 +390,7 @@ const About = () => {
               </ul>
             </motion.div>
 
-            {/* Virtual Assistance */}
+            {/* Executive Assistant */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -402,12 +402,12 @@ const About = () => {
                 <div className="bg-primary/10 p-3 rounded-full">
                   <Clock className="text-primary" size={24} />
                 </div>
-                <h2 className="text-2xl font-bold">Virtual Assistance</h2>
+                <h2 className="text-2xl font-bold">Executive Assistant</h2>
               </div>
               <p className="text-foreground/80 mb-6">
-                <span className="font-semibold text-primary">Optimize Your Business with Dependable Virtual Assistance.</span> As a business owner, 
+                <span className="font-semibold text-primary">Optimize Your Business with Dependable Executive Assistance.</span> As a business owner, 
                 you juggle various responsibilities. Allow us to assist you in delegating tasks and creating more time 
-                for what truly matters. Our virtual assistant services deliver professional support to help you 
+                for what truly matters. Our executive assistant services deliver professional support to help you 
                 handle your workload and enhance efficiency.
               </p>
               

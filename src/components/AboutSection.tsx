@@ -173,8 +173,8 @@ const AboutSection = () => {
                 <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
                   <Clock className="text-primary" size={24} />
                 </div>
-                <h3 className="text-lg font-bold mb-2">Virtual Assistance</h3>
-                <p className="text-foreground/70 text-sm">Optimize your business with dependable virtual assistance for administrative tasks, customer service, and more.</p>
+                <h3 className="text-lg font-bold mb-2">Executive Assistant</h3>
+                <p className="text-foreground/70 text-sm">Optimize your business with dependable executive assistance for administrative tasks, customer service, and more.</p>
               </motion.div>
             </div>
           </div>
