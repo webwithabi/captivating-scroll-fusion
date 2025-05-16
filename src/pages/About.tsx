@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import ParallaxEffect from '@/components/ParallaxEffect';
-import { ArrowRight, Megaphone, Globe, Palette, ClipboardList, Clock } from 'lucide-react';
+import { ArrowRight, Users, Briefcase, Clock, Target, Award, Heart } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import CounterAnimation from '@/components/CounterAnimation';
+import ParallaxEffect from '@/components/ParallaxEffect';
+import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
   return (
@@ -29,19 +29,18 @@ const About = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <div className="chip chip-primary mb-4 mx-auto">About Us</div>
+                <div className="chip chip-primary mb-4 mx-auto">Who We Are</div>
                 <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
-                  Your Trusted Partner for <span className="text-gradient">Growth</span> and <span className="text-gradient">Success</span>
+                  About <span className="text-gradient">OutPerformo</span>
                 </h1>
                 <p className="text-foreground/80 text-lg md:text-xl">
-                  At Zopbiz Solutions, we're dedicated to helping businesses like yours succeed. 
-                  With a focus on innovative marketing solutions and expert project management, 
-                  we're your trusted partner for growth and success.
+                  OutPerformo is a premier digital marketing and project management agency dedicated to helping businesses 
+                  achieve their goals through innovative strategies and solutions.
                 </p>
               </motion.div>
             </ParallaxEffect>
 
-            {/* Marketing Strategy Services */}
+            {/* Our Story */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -49,148 +48,67 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="glass p-8 rounded-xl mb-16"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Megaphone className="text-primary" size={24} />
+              <h2 className="text-2xl font-bold mb-6">Our Story</h2>
+              <div className="flex flex-col md:flex-row gap-8">
+                <div className="md:w-1/2">
+                  <p className="text-foreground/80 mb-4">
+                    Founded in 2015, OutPerformo was born out of a passion for helping businesses navigate the 
+                    complex world of digital marketing and project management. What started as a small team of 
+                    dedicated professionals has grown into a trusted agency serving clients across various industries.
+                  </p>
+                  <p className="text-foreground/80">
+                    Our journey has been defined by a commitment to excellence, innovation, and delivering 
+                    results that exceed client expectations. With each project, we've refined our approach and 
+                    expanded our capabilities to meet the evolving needs of the businesses we serve.
+                  </p>
                 </div>
-                <h2 className="text-2xl font-bold">Marketing Strategy Services</h2>
-              </div>
-              <p className="text-foreground/80 mb-6">
-                <span className="font-semibold text-primary">Get proven results - stop wasting marketing dollars.</span> In today's competitive landscape, 
-                a well-crafted marketing strategy is crucial for business success. Our team of experts helps you 
-                develop and execute tailored marketing plans to drive growth, boost brand awareness, and increase conversions.
-              </p>
-              
-              <h3 className="text-xl font-bold mb-2">Our Expertise</h3>
-              <p className="text-foreground/80 mb-6">
-                With years of experience in marketing strategy development, we've helped numerous 
-                businesses achieve their goals through data-driven approaches.
-              </p>
-              
-              <h3 className="text-xl font-bold mb-2">Services</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Marketing Strategy Development:</span> Customized marketing plans aligned with your business objectives.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Market Research and Analysis:</span> In-depth research to understand your target audience, industry trends, and competitors.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Digital Marketing:</span> Expertise in SEO, social media, content marketing, and more.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Performance Tracking and Optimization:</span> Continuous monitoring and improvement of marketing efforts.</span>
-                </li>
-              </ul>
-              
-              <h3 className="text-xl font-bold mb-2">Benefits</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Increased Brand Awareness:</span> Effective marketing strategies to reach your target audience.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Improved Conversions:</span> Data-driven approaches to drive sales, leads, or other desired actions.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Competitive Edge:</span> Stay ahead of competitors with tailored marketing solutions.</span>
-                </li>
-              </ul>
-              
-              <div className="mt-6">
-                <a href="/contact" className="btn-primary">
-                  Get Started
-                </a>
+                <div className="md:w-1/2">
+                  <div className="rounded-lg overflow-hidden h-full">
+                    <img 
+                      src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" 
+                      alt="Team collaboration" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
               </div>
             </motion.div>
 
-            {/* Digital Marketing Services */}
+            {/* Our Mission & Vision */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="glass p-8 rounded-xl mb-16"
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Globe className="text-primary" size={24} />
+              <div className="glass p-8 rounded-xl">
+                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                  <Target className="text-primary" size={24} />
                 </div>
-                <h2 className="text-2xl font-bold">Digital Marketing Services</h2>
+                <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+                <p className="text-foreground/80">
+                  To empower businesses with innovative marketing strategies and project management solutions 
+                  that drive growth, enhance visibility, and create lasting success. We are committed to 
+                  delivering exceptional results through data-driven approaches, creative thinking, and 
+                  unwavering dedication to our clients' goals.
+                </p>
               </div>
-              <p className="text-foreground/80 mb-6">
-                <span className="font-semibold text-primary">Boost Your Online Presence and Drive Results.</span> In today's digital landscape, 
-                a strong online presence is crucial for business success. Our team of experts helps you develop 
-                and execute effective digital marketing strategies to reach your target audience, drive conversions, 
-                and grow your business.
-              </p>
-              
-              <h3 className="text-xl font-bold mb-2">Our Expertise</h3>
-              <p className="text-foreground/80 mb-6">
-                With years of experience in digital marketing, we've helped numerous businesses achieve 
-                their online goals through data-driven approaches.
-              </p>
-              
-              <h3 className="text-xl font-bold mb-2">Services</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Search Engine Optimization (SEO):</span> Improve your website's visibility and ranking on search engines.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Web Development:</span> A well-designed website is crucial for any business or organization. Our team of expert web developers creates custom web solutions that meet your unique needs and goals.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Pay-Per-Click (PPC) Advertising:</span> Targeted online ads to drive conversions and sales.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Social Media Marketing:</span> Engage with your audience and build your brand on social media platforms.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Content Marketing:</span> Create high-quality, relevant content to attract and retain customers.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Email Marketing:</span> Nurture leads and drive conversions through targeted email campaigns.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Digital Analytics:</span> Track and analyze your online performance to inform data-driven decisions.</span>
-                </li>
-              </ul>
-              
-              <h3 className="text-xl font-bold mb-2">Benefits</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Increased Online Visibility:</span> Improve your website's visibility and reach a wider audience.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Targeted Advertising:</span> Reach your target audience with precision and drive conversions.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Measurable Results:</span> Track and analyze your online performance to optimize your marketing efforts.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Competitive Edge:</span> Stay ahead of competitors with effective digital marketing strategies.</span>
-                </li>
-              </ul>
+              <div className="glass p-8 rounded-xl">
+                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                  <Award className="text-primary" size={24} />
+                </div>
+                <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
+                <p className="text-foreground/80">
+                  To be the trusted partner for businesses seeking to transform their marketing and project 
+                  management capabilities. We envision a future where our clients achieve unprecedented 
+                  success through our strategic guidance, innovative solutions, and commitment to excellence 
+                  in every aspect of our service.
+                </p>
+              </div>
             </motion.div>
 
-            {/* Branding Services */}
+            {/* Our Values */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -198,103 +116,56 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="glass p-8 rounded-xl mb-16"
             >
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb-6">
                 <div className="bg-primary/10 p-3 rounded-full">
-                  <Palette className="text-primary" size={24} />
+                  <Heart className="text-primary" size={24} />
                 </div>
-                <h2 className="text-2xl font-bold">Branding Services</h2>
+                <h2 className="text-2xl font-bold">Our Values</h2>
               </div>
-              <p className="text-foreground/80 mb-6">
-                With years of experience in branding, we've helped numerous businesses establish a lasting 
-                impression and achieve their goals.
-              </p>
               
-              <h3 className="text-xl font-bold mb-2">Services</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Brand Strategy:</span> Develop a tailored brand strategy that aligns with your business objectives.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Brand Identity:</span> Create a unique and memorable brand identity, including logos, color schemes, and typography.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Brand Messaging:</span> Craft compelling brand messaging that resonates with your target audience.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Brand Guidelines:</span> Establish brand guidelines to ensure consistency across all marketing channels.</span>
-                </li>
-              </ul>
-              
-              <h3 className="text-xl font-bold mb-2">Benefits</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Increased Recognition:</span> A strong brand identity that sets you apart from competitors.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Improved Credibility:</span> A professional brand image that builds trust with your target audience.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Consistency:</span> A consistent brand message and visual identity across all marketing channels.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Emotional Connection:</span> A brand that resonates with your target audience and builds a lasting impression.</span>
-                </li>
-              </ul>
-              
-              <h3 className="text-xl font-bold mb-2">Graphic Design Solutions</h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Corporate Branding</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>3D Graphics</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Logo Creation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Corporate Identity Development</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Booklets & Brochures Design</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Banner Design</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Icon & Monogram Design</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Business Cards</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Product Packaging</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Newsletter & Flyer Design</span>
-                </li>
-              </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Excellence</h3>
+                  <p className="text-foreground/80 mb-4">
+                    We are committed to delivering the highest quality in everything we do. 
+                    From strategic planning to execution, we strive for excellence at every step.
+                  </p>
+                  
+                  <h3 className="text-xl font-bold mb-2">Innovation</h3>
+                  <p className="text-foreground/80 mb-4">
+                    We embrace creative thinking and constantly explore new ideas and approaches 
+                    to help our clients stay ahead in a rapidly changing digital landscape.
+                  </p>
+                  
+                  <h3 className="text-xl font-bold mb-2">Integrity</h3>
+                  <p className="text-foreground/80">
+                    We operate with honesty, transparency, and ethical practices in all our interactions. 
+                    We build trust through our actions and always do what's right for our clients.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Collaboration</h3>
+                  <p className="text-foreground/80 mb-4">
+                    We believe in the power of teamwork and foster strong partnerships with our clients. 
+                    We work together to achieve shared goals and create mutual success.
+                  </p>
+                  
+                  <h3 className="text-xl font-bold mb-2">Results-Driven</h3>
+                  <p className="text-foreground/80 mb-4">
+                    We focus on outcomes that matter. Our strategies and solutions are designed 
+                    to deliver measurable results that contribute to our clients' business objectives.
+                  </p>
+                  
+                  <h3 className="text-xl font-bold mb-2">Continuous Learning</h3>
+                  <p className="text-foreground/80">
+                    We are committed to ongoing growth and development. We stay current with industry 
+                    trends and best practices to provide our clients with cutting-edge solutions.
+                  </p>
+                </div>
+              </div>
             </motion.div>
 
-            {/* Project Management Services */}
+            {/* Our Team */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -302,95 +173,55 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="glass p-8 rounded-xl mb-16"
             >
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb-6">
                 <div className="bg-primary/10 p-3 rounded-full">
-                  <ClipboardList className="text-primary" size={24} />
+                  <Users className="text-primary" size={24} />
                 </div>
-                <h2 className="text-2xl font-bold">Project Management Services</h2>
+                <h2 className="text-2xl font-bold">Our Team</h2>
               </div>
               
-              <h3 className="text-xl font-bold mb-2">PMO Setup</h3>
-              <p className="text-foreground/80 mb-4">
-                PMO-implemented organizations NOT ONLY executed their projects successfully but also 
-                align them with business goals and strategies, utilizing best practices from PM Professionals worldwide.
-              </p>
-              <p className="text-foreground/80 mb-6">
-                In addition to the intricacies involved in project execution, stakeholders possess 
-                a variety of expectations that can frequently conflict with one another. By aligning all 
-                stakeholders to a unified perspective through data, the following outcomes can be achieved:
+              <p className="text-foreground/80 mb-8">
+                Our team of experts brings together diverse skills, experiences, and perspectives to deliver 
+                comprehensive solutions for our clients. With backgrounds in marketing, project management, 
+                design, development, and more, we have the expertise to tackle any challenge.
               </p>
               
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Increased likelihood of project success</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Enhanced cost savings leading to improved project profitability</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>A structured framework for implementing business strategies</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Informed decision-making to attain desired benefit metrics</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>A methodical approach to risk and issue management</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Assurance of quality through standardized process assets</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span>Sustained focus on delivering value that transcends budget and time constraints</span>
-                </li>
-              </ul>
-              
-              <p className="text-foreground/80 mb-6">
-                We are a group of Project Management Consultants with combined experience of more than 
-                three decades, experience at our client organizations. Our PMO implementation team 
-                comprises of a PMI-certified SME and two consultants. AS you are aware PMO processes 
-                ensure that the best practices and standards suggested by the Project Management Institute 
-                (PMI) are deployed for improved & desired outcomes.
-              </p>
-              
-              <h3 className="text-xl font-bold mb-2">Supporting Documentation</h3>
-              <p className="text-foreground/80 mb-4">
-                Supporting documentation plays a crucial role in project management, ensuring that all 
-                stakeholders are informed and aligned throughout the project lifecycle.
-              </p>
-              
-              <h4 className="text-lg font-bold mb-2">Benefits of Supporting Documentation</h4>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Improved Communication:</span> Ensures that all stakeholders are informed and aligned throughout the project.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Increased Transparency:</span> Provides a clear understanding of project progress, issues, and decisions.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Better Decision-Making:</span> Enables informed decision-making based on accurate and up-to-date information.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Reduced Risk:</span> Helps identify and mitigate potential risks, reducing the likelihood of project failure.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Improved Quality:</span> Ensures that project deliverables meet the required quality standards.</span>
-                </li>
-              </ul>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {[
+                  {
+                    name: "Alex Morgan",
+                    role: "Marketing Director",
+                    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  },
+                  {
+                    name: "Sarah Johnson",
+                    role: "Project Management Lead",
+                    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80"
+                  },
+                  {
+                    name: "Michael Chen",
+                    role: "SEO Specialist",
+                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  }
+                ].map((member, index) => (
+                  <Card key={index} className="overflow-hidden">
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={member.image} 
+                        alt={member.name} 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <CardContent className="pt-4">
+                      <h3 className="text-lg font-bold">{member.name}</h3>
+                      <p className="text-foreground/70">{member.role}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </motion.div>
 
-            {/* Executive Assistant */}
+            {/* Why Choose Us */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -398,105 +229,81 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="glass p-8 rounded-xl mb-16"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Clock className="text-primary" size={24} />
+              <h2 className="text-2xl font-bold mb-6">Why Choose OutPerformo?</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="flex gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full h-fit">
+                    <Briefcase className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Industry Expertise</h3>
+                    <p className="text-foreground/80">
+                      With years of experience in digital marketing and project management, we have the knowledge and 
+                      skills to help your business succeed. Our team stays up-to-date with the latest trends and 
+                      technologies to provide cutting-edge solutions.
+                    </p>
+                  </div>
                 </div>
-                <h2 className="text-2xl font-bold">Executive Assistant</h2>
-              </div>
-              <p className="text-foreground/80 mb-6">
-                <span className="font-semibold text-primary">Optimize Your Business with Dependable Executive Assistance.</span> As a business owner, 
-                you juggle various responsibilities. Allow us to assist you in delegating tasks and creating more time 
-                for what truly matters. Our executive assistant services deliver professional support to help you 
-                handle your workload and enhance efficiency.
-              </p>
-              
-              <h3 className="text-xl font-bold mb-2">Services</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Administrative Tasks:</span> Email management, calendar organization, data entry, and more.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Customer Service:</span> Respond to customer inquiries, resolve issues, and provide top-notch support.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Scheduling:</span> Manage appointments, bookings, and schedules with ease.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Research:</span> Conduct research, gather data, and provide insights to inform business decisions.</span>
-                </li>
-              </ul>
-              
-              <h3 className="text-xl font-bold mb-2">Benefits</h3>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Increased Productivity:</span> Free up time to focus on high-priority tasks and grow your business.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Cost-Effective:</span> Reduce labor costs and overhead expenses by outsourcing tasks to a virtual assistant.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Flexibility:</span> Get support on a project-by-project basis or on an ongoing basis, depending on your needs.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="text-primary mt-1 flex-shrink-0" size={16} />
-                  <span><span className="font-semibold">Expertise:</span> Tap into specialized skills and expertise without having to hire a full-time employee.</span>
-                </li>
-              </ul>
-              
-              <div className="mt-6">
-                <a href="/contact" className="btn-primary">
-                  Get Started
-                </a>
+                
+                <div className="flex gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full h-fit">
+                    <Target className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Results-Driven Approach</h3>
+                    <p className="text-foreground/80">
+                      We focus on outcomes that matter to your business. Our strategies and solutions are designed 
+                      to deliver measurable results that contribute to your business objectives, whether it's 
+                      increasing website traffic, generating leads, or improving project efficiency.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full h-fit">
+                    <Users className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Client-Centric Focus</h3>
+                    <p className="text-foreground/80">
+                      We put our clients at the heart of everything we do. We take the time to understand your unique 
+                      needs, goals, and challenges, and develop tailored solutions that address your specific requirements.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full h-fit">
+                    <Clock className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Timely Delivery</h3>
+                    <p className="text-foreground/80">
+                      We understand the importance of time in business. Our efficient processes and dedicated team 
+                      ensure that projects are completed on schedule, without compromising on quality or attention to detail.
+                    </p>
+                  </div>
+                </div>
               </div>
             </motion.div>
             
-            {/* Stats Counter */}
+            {/* CTA */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+              className="text-center"
             >
-              <div className="glass p-6 rounded-xl text-center">
-                <ClipboardList className="text-primary mx-auto mb-3" size={32} />
-                <h3 className="text-3xl font-bold mb-2">
-                  <CounterAnimation end={100} duration={2} />+
-                </h3>
-                <p className="text-foreground/70">Projects Completed</p>
-              </div>
-              
-              <div className="glass p-6 rounded-xl text-center">
-                <Globe className="text-primary mx-auto mb-3" size={32} />
-                <h3 className="text-3xl font-bold mb-2">
-                  <CounterAnimation end={50} duration={2} />+
-                </h3>
-                <p className="text-foreground/70">Satisfied Clients</p>
-              </div>
-              
-              <div className="glass p-6 rounded-xl text-center">
-                <Megaphone className="text-primary mx-auto mb-3" size={32} />
-                <h3 className="text-3xl font-bold mb-2">
-                  <CounterAnimation end={30} duration={2} />+
-                </h3>
-                <p className="text-foreground/70">Years Experience</p>
-              </div>
-              
-              <div className="glass p-6 rounded-xl text-center">
-                <Palette className="text-primary mx-auto mb-3" size={32} />
-                <h3 className="text-3xl font-bold mb-2">
-                  <CounterAnimation end={200} duration={2} />+
-                </h3>
-                <p className="text-foreground/70">Design Projects</p>
-              </div>
+              <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+              <p className="text-foreground/80 max-w-2xl mx-auto mb-6">
+                Contact us today to learn more about how OutPerformo can help your business achieve its goals 
+                through innovative marketing strategies and project management solutions.
+              </p>
+              <a href="/contact" className="btn-primary">
+                Get in Touch
+              </a>
             </motion.div>
           </div>
         </section>

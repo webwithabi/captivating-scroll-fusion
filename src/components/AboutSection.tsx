@@ -60,7 +60,7 @@ const AboutSection = () => {
                 variants={fadeInUpVariants}
                 className="chip chip-primary mb-4"
               >
-                About Us
+                About OutPerformo
               </motion.div>
               
               <motion.h2
@@ -68,7 +68,7 @@ const AboutSection = () => {
                 variants={fadeInUpVariants}
                 className="text-3xl md:text-4xl font-display font-bold mb-6"
               >
-                Your Trusted Partner for <span className="text-gradient">Growth</span> and <span className="text-gradient">Success</span>
+                Premier <span className="text-gradient">Digital Marketing</span> & <span className="text-gradient">Project Management</span> Agency
               </motion.h2>
               
               <motion.p
@@ -76,9 +76,8 @@ const AboutSection = () => {
                 variants={fadeInUpVariants}
                 className="text-foreground/80 mb-4"
               >
-                At Outperformo Solutions, we're dedicated to helping businesses like yours succeed. 
-                With a focus on innovative marketing solutions and expert project management, 
-                we're your trusted partner for growth and success.
+                OutPerformo is a premier digital marketing and project management agency dedicated to helping businesses 
+                achieve their goals through innovative strategies and solutions.
               </motion.p>
               
               <motion.p
