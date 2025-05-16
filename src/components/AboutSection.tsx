@@ -2,7 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import ParallaxEffect from './ParallaxEffect';
-import { Megaphone, Globe, Palette, ClipboardList, Clock } from 'lucide-react';
+import { Megaphone, Globe, Palette, ClipboardList, Clock, Star, Handshake } from 'lucide-react';
 
 const AboutSection = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -74,16 +74,16 @@ const AboutSection = () => {
               <motion.p
                 custom={2}
                 variants={fadeInUpVariants}
-                className="text-foreground/80 mb-4"
+                className="text-foreground/80 mb-4 font-semibold"
               >
-                OutPerformo is a premier digital marketing and project management agency dedicated to helping businesses 
-                achieve their goals through innovative strategies and solutions.
+                At Outperformo, our consultants are committed to propelling your business toward success with tailored, 
+                growth-driven strategies that engage audiences and catalyze engagement.
               </motion.p>
               
               <motion.p
                 custom={3}
                 variants={fadeInUpVariants}
-                className="text-foreground/80 mb-6"
+                className="text-foreground/80 mb-6 font-semibold"
               >
                 With {count}+ years of experience in the field, we are always looking for new and innovative ways to bring our clients' visions to life.
               </motion.p>
@@ -116,7 +116,7 @@ const AboutSection = () => {
                   <Megaphone className="text-primary" size={24} />
                 </div>
                 <h3 className="text-lg font-bold mb-2">Marketing Strategy</h3>
-                <p className="text-foreground/70 text-sm">Get proven results - stop wasting marketing dollars with our tailored marketing solutions.</p>
+                <p className="text-foreground/70 text-sm font-semibold">Get proven results - stop wasting marketing dollars with our tailored marketing solutions.</p>
               </motion.div>
 
               <motion.div
@@ -130,7 +130,7 @@ const AboutSection = () => {
                   <Globe className="text-primary" size={24} />
                 </div>
                 <h3 className="text-lg font-bold mb-2">Digital Marketing</h3>
-                <p className="text-foreground/70 text-sm">Boost your online presence with SEO, social media, content marketing, and more.</p>
+                <p className="text-foreground/70 text-sm font-semibold">Boost your online presence with SEO, social media, content marketing, and more.</p>
               </motion.div>
 
               <motion.div
@@ -144,7 +144,7 @@ const AboutSection = () => {
                   <Palette className="text-primary" size={24} />
                 </div>
                 <h3 className="text-lg font-bold mb-2">Branding</h3>
-                <p className="text-foreground/70 text-sm">Create a unique and memorable brand identity that resonates with your audience.</p>
+                <p className="text-foreground/70 text-sm font-semibold">Create a unique and memorable brand identity that resonates with your audience.</p>
               </motion.div>
 
               <motion.div
@@ -158,7 +158,7 @@ const AboutSection = () => {
                   <ClipboardList className="text-primary" size={24} />
                 </div>
                 <h3 className="text-lg font-bold mb-2">Project Management</h3>
-                <p className="text-foreground/70 text-sm">Expert PMO setup and documentation for successful project execution.</p>
+                <p className="text-foreground/70 text-sm font-semibold">Expert PMO setup and documentation for successful project execution.</p>
               </motion.div>
 
               <motion.div
@@ -173,7 +173,7 @@ const AboutSection = () => {
                   <Clock className="text-primary" size={24} />
                 </div>
                 <h3 className="text-lg font-bold mb-2">Executive Assistant</h3>
-                <p className="text-foreground/70 text-sm">Optimize your business with dependable executive assistance for administrative tasks, customer service, and more.</p>
+                <p className="text-foreground/70 text-sm font-semibold">Optimize your business with dependable executive assistance for administrative tasks, customer service, and more.</p>
               </motion.div>
             </div>
           </div>

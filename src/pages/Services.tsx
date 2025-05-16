@@ -131,6 +131,12 @@ const Services = () => {
                 and grow your business.
               </p>
               
+              <p className="text-foreground/80 mb-6 font-semibold border-l-4 border-primary pl-4 italic">
+                Digital success is not the privilege of the few; it's the right of all. We stand by the conviction that 
+                every small business is entitled to thrive online. We deliver impactful, budget-friendly digital 
+                marketing solutions tailored to your business's distinct needs.
+              </p>
+              
               <h3 className="text-xl font-bold mb-2">Our Expertise</h3>
               <p className="text-foreground/80 mb-6">
                 With years of experience in digital marketing, we've helped numerous businesses achieve 

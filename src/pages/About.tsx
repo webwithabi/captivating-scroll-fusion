@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Users, Briefcase, Clock, Target, Award, Heart } from 'lucide-react';
+import { ArrowRight, Users, Briefcase, Clock, Target, Award, Star, Handshake, Info } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ParallaxEffect from '@/components/ParallaxEffect';
@@ -33,9 +33,9 @@ const About = () => {
                 <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
                   About <span className="text-gradient">OutPerformo</span>
                 </h1>
-                <p className="text-foreground/80 text-lg md:text-xl">
-                  OutPerformo is a premier digital marketing and project management agency dedicated to helping businesses 
-                  achieve their goals through innovative strategies and solutions.
+                <p className="text-foreground/80 text-lg md:text-xl font-semibold">
+                  At Outperformo, our consultants are committed to propelling your business toward success 
+                  with tailored, growth-driven strategies that engage audiences and catalyze engagement.
                 </p>
               </motion.div>
             </ParallaxEffect>
@@ -57,9 +57,9 @@ const About = () => {
                     dedicated professionals has grown into a trusted agency serving clients across various industries.
                   </p>
                   <p className="text-foreground/80">
-                    Our journey has been defined by a commitment to excellence, innovation, and delivering 
-                    results that exceed client expectations. With each project, we've refined our approach and 
-                    expanded our capabilities to meet the evolving needs of the businesses we serve.
+                    With a focus on innovative marketing solutions and expert project management, 
+                    we're your trusted partner for growth and success. With years of experience in the field, 
+                    we always look for new and innovative ways to bring our clients' visions to life.
                   </p>
                 </div>
                 <div className="md:w-1/2">
@@ -70,6 +70,49 @@ const About = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Outperforming Together with 3 C's */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="glass p-8 rounded-xl mb-16"
+            >
+              <h2 className="text-2xl font-bold mb-6">Outperforming Together with 3 C's</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <div className="bg-primary/5 p-6 rounded-xl">
+                  <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                    <Handshake className="text-primary" size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">We Collaborate</h3>
+                  <p className="text-foreground/80 font-semibold">
+                    Strategy and vision aligned with overall business. Your goals, synchronized.
+                  </p>
+                </div>
+                
+                <div className="bg-primary/5 p-6 rounded-xl">
+                  <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                    <Info className="text-primary" size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">We Communicate</h3>
+                  <p className="text-foreground/80 font-semibold">
+                    Transparency, agility, accountability. You're always empowered.
+                  </p>
+                </div>
+                
+                <div className="bg-primary/5 p-6 rounded-xl">
+                  <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                    <Star className="text-primary" size={24} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">We Customize</h3>
+                  <p className="text-foreground/80 font-semibold">
+                    Beyond one-size-fits-all. Solutions as unique as your vision.
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -108,63 +151,73 @@ const About = () => {
               </div>
             </motion.div>
 
-            {/* Our Values */}
+            {/* Why Choose Us */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="glass p-8 rounded-xl mb-16"
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Heart className="text-primary" size={24} />
-                </div>
-                <h2 className="text-2xl font-bold">Our Values</h2>
-              </div>
+              <h2 className="text-2xl font-bold mb-6">Why Choose OutPerformo?</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Excellence</h3>
-                  <p className="text-foreground/80 mb-4">
-                    We are committed to delivering the highest quality in everything we do. 
-                    From strategic planning to execution, we strive for excellence at every step.
-                  </p>
-                  
-                  <h3 className="text-xl font-bold mb-2">Innovation</h3>
-                  <p className="text-foreground/80 mb-4">
-                    We embrace creative thinking and constantly explore new ideas and approaches 
-                    to help our clients stay ahead in a rapidly changing digital landscape.
-                  </p>
-                  
-                  <h3 className="text-xl font-bold mb-2">Integrity</h3>
-                  <p className="text-foreground/80">
-                    We operate with honesty, transparency, and ethical practices in all our interactions. 
-                    We build trust through our actions and always do what's right for our clients.
-                  </p>
+                <div className="flex gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full h-fit">
+                    <Briefcase className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Industry Expertise</h3>
+                    <p className="text-foreground/80 font-semibold">
+                      With years of experience in digital marketing and project management, we have the knowledge and 
+                      skills to help your business succeed. Our team stays up-to-date with the latest trends and 
+                      technologies to provide cutting-edge solutions.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Collaboration</h3>
-                  <p className="text-foreground/80 mb-4">
-                    We believe in the power of teamwork and foster strong partnerships with our clients. 
-                    We work together to achieve shared goals and create mutual success.
-                  </p>
-                  
-                  <h3 className="text-xl font-bold mb-2">Results-Driven</h3>
-                  <p className="text-foreground/80 mb-4">
-                    We focus on outcomes that matter. Our strategies and solutions are designed 
-                    to deliver measurable results that contribute to our clients' business objectives.
-                  </p>
-                  
-                  <h3 className="text-xl font-bold mb-2">Continuous Learning</h3>
-                  <p className="text-foreground/80">
-                    We are committed to ongoing growth and development. We stay current with industry 
-                    trends and best practices to provide our clients with cutting-edge solutions.
-                  </p>
+                
+                <div className="flex gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full h-fit">
+                    <Target className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Results-Driven Approach</h3>
+                    <p className="text-foreground/80 font-semibold">
+                      We focus on outcomes that matter to your business. Our strategies and solutions are designed 
+                      to deliver measurable results that contribute to your business objectives, whether it's 
+                      increasing website traffic, generating leads, or improving project efficiency.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full h-fit">
+                    <Users className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Personalized Service</h3>
+                    <p className="text-foreground/80 font-semibold">
+                      We take the time to understand your unique needs and deliver customized solutions.
+                      We put our clients at the heart of everything we do.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full h-fit">
+                    <Star className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Innovation</h3>
+                    <p className="text-foreground/80 font-semibold">
+                      We're always looking for new and better ways to solve problems and deliver results. 
+                      Our innovative approaches help you stay ahead of the competition.
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
-
+            
             {/* Our Team */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -180,7 +233,7 @@ const About = () => {
                 <h2 className="text-2xl font-bold">Our Team</h2>
               </div>
               
-              <p className="text-foreground/80 mb-8">
+              <p className="text-foreground/80 mb-8 font-semibold">
                 Our team of experts brings together diverse skills, experiences, and perspectives to deliver 
                 comprehensive solutions for our clients. With backgrounds in marketing, project management, 
                 design, development, and more, we have the expertise to tackle any challenge.
@@ -220,86 +273,22 @@ const About = () => {
                 ))}
               </div>
             </motion.div>
-
-            {/* Why Choose Us */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="glass p-8 rounded-xl mb-16"
-            >
-              <h2 className="text-2xl font-bold mb-6">Why Choose OutPerformo?</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="flex gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full h-fit">
-                    <Briefcase className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Industry Expertise</h3>
-                    <p className="text-foreground/80">
-                      With years of experience in digital marketing and project management, we have the knowledge and 
-                      skills to help your business succeed. Our team stays up-to-date with the latest trends and 
-                      technologies to provide cutting-edge solutions.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full h-fit">
-                    <Target className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Results-Driven Approach</h3>
-                    <p className="text-foreground/80">
-                      We focus on outcomes that matter to your business. Our strategies and solutions are designed 
-                      to deliver measurable results that contribute to your business objectives, whether it's 
-                      increasing website traffic, generating leads, or improving project efficiency.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full h-fit">
-                    <Users className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Client-Centric Focus</h3>
-                    <p className="text-foreground/80">
-                      We put our clients at the heart of everything we do. We take the time to understand your unique 
-                      needs, goals, and challenges, and develop tailored solutions that address your specific requirements.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full h-fit">
-                    <Clock className="text-primary" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">Timely Delivery</h3>
-                    <p className="text-foreground/80">
-                      We understand the importance of time in business. Our efficient processes and dedicated team 
-                      ensure that projects are completed on schedule, without compromising on quality or attention to detail.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
             
-            {/* CTA */}
+            {/* Contact Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-center"
+              className="text-center mb-16"
             >
               <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
-              <p className="text-foreground/80 max-w-2xl mx-auto mb-6">
+              <p className="text-foreground/80 max-w-2xl mx-auto mb-6 font-semibold">
                 Contact us today to learn more about how OutPerformo can help your business achieve its goals 
                 through innovative marketing strategies and project management solutions.
+              </p>
+              <p className="text-foreground/90 font-semibold mb-6">
+                Email: <a href="mailto:gayathri.j@outperformo.com" className="text-primary hover:underline">gayathri.j@outperformo.com</a>
               </p>
               <a href="/contact" className="btn-primary">
                 Get in Touch
